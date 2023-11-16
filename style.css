@@ -1,39 +1,38 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-body{
+    overflow-x: hidden;
+  }
+  
+  body {
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
-
-}
-
-.container{
+  }
+  
+  .container {
     max-width: 1200px;
-   margin: auto;
-   display: flex;
+    margin: auto;
+    display: flex;
     align-items: center;
     justify-content: center;
     gap: 20%;
-}
-.center{
+  }
+  
+  .center {
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 6px;
     position: absolute;
     top: 37%;
-    padding:10px;
-    border: 1px solid rgb(103, 103, 156); 
+    padding: 10px;
+    border: 1px solid rgb(103, 103, 156);
     left: 50%;
     transform: translate(-50%, -50%);
+  }
   
-
-}
-.info{
-   
+  .info {
     background: #f6f6f6;
     margin-top: 20px;
     margin-right: 10px;
@@ -46,39 +45,42 @@ body{
     color: #666;
     border-radius: 6px;
     width: fit-content;
-    transition: .3s;
- 
-}
-.reset {
+    transition: 0.3s;
+  }
+  
+  .reset {
     padding: 5px 10px;
     background-color: transparent;
     border: 1px solid rgb(103, 103, 156);
     border-radius: 4px;
     outline: none;
     position: relative;
-    text-decoration: none;z-index: 1;
-}
-.reset::before{
+    color: rgb(103, 103, 156);
+    text-decoration: none;
+    z-index: 1;
+  }
+  
+  .reset::before {
     content: "";
     position: absolute;
     z-index: -1;
     left: 0;
     top: 0;
     width: 0;
-    background-color:rgb(103, 103, 156); ;
-    transition: .3s;
-}
-.reset:hover{
+    background-color: rgb(103, 103, 156);
+    transition: 0.3s;
+  }
+  
+  .reset:hover {
     color: white;
-}
-.reset:hover::before {
+  }
+  
+  .reset:hover::before {
     width: 100%;
     height: 101%;
-   
- 
- 
-}
-.repo-container{
+  }
+  
+  .repo-container {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -90,47 +92,52 @@ body{
     border: 3px solid rgb(103, 103, 156);
     border-radius: 6px;
     color: #777;
-        padding-left: 15px;
-        margin-top: 100px;
+    padding-left: 15px;
+    margin-top: 100px;
     padding-right: 15px;
-}
-.repo-container h1{
+  }
+  
+  .repo-container h1 {
     font-size: 26px;
     font-weight: 600;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 5px;
-}
-.link{
-    color:rgb(103, 103, 156); 
+  }
+  
+  .link {
+   
     margin: 10px 0;
-    
-}
-.repo-container p {
+  }
+  
+  .repo-container p {
     padding: 5px;
     font-size: 16px;
     font-weight: 400;
     margin-top: 10px;
     margin-bottom: 10px;
     border-bottom: 1px solid #eee;
-}
-.info:hover{
+  }
+  
+  .info:hover {
     background: #ffffff77;
     color: #333;
-   
-}
-.info h1{
+  }
+  
+  .info h1 {
     font-size: 30px;
     margin-top: 10px;
     margin-bottom: 10px;
-}
-.info p{
+  }
+  
+  .info p {
     margin: 10px 0;
     padding: 10px;
     font-size: 20px;
     text-align: center;
-}
-form{
+  }
+  
+  form {
     display: flex;
     padding: 25px;
     background-color: #f6f6f6;
@@ -140,56 +147,125 @@ form{
     gap: 25px;
     margin-top: 50px;
     margin-bottom: 50px;
-}
-form input[type="text"]{
+  }
   
+  form input[type="text"] {
     padding: 5px;
-    
     outline: none;
     display: block;
- 
-  border: none;
-  border-bottom: 1px solid #515151;
-  background: transparent;
- caret-color: #333;
-} 
-form input[type="submit"]{
-border-radius: 6px;
-height: 30.58px;
-padding: 5px 10px;
-outline: none;
-border: none;
-background: rgb(103, 103, 156);
-color: white;
-transition: .3s ;
-
-}
-
-form input[type="submit"]:hover{
+    border: none;
+    border-bottom: 1px solid #515151;
+    background: transparent;
+    caret-color: #333;
+  }
+  
+  form input[type="submit"] {
+    border-radius: 6px;
+    height: 30.58px;
+    padding: 5px 10px;
+    outline: none;
+    border: none;
+    background: rgb(103, 103, 156);
+    color: white;
+    transition: 0.3s;
+  }
+  
+  form input[type="submit"]:hover {
     background: rgb(104, 104, 185);
-}
-.repo-holder{
+  }
+  
+  .repo-holder {
     display: block;
     margin: 220px auto;
     padding: 68px;
     width: fit-content;
     height: fit-content;
-
-
-}
-.link{
-
-}
-.repo-container{
-    text-align: center;
-}
-.repo-container h1 {
+  }
+  
+  .link {
+  }
+  
+  .repo-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: fit-content;
+    background-color: transparent;
+    border: 3px solid rgb(103, 103, 156);
+    border-radius: 6px;
+    color: #777;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 50px;
+  }
+  
+  .repo-container h1 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+  }
+  
+  .link {
+    color: rgb(103, 103, 156);
+    margin: 10px 0;
+  }
+  
+  .repo-container p {
+    padding: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border-bottom: 1px solid #eee;
-}
-@media (max-width:776px) {
+  }
+  
+  @media only screen and (max-width: 350px) {
+    .container {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .center {
+      top: 40%;
+      transform: translate(-50%, -50%);
+    }
+  
+  
+    .info {
+      margin: 10px;
+    }
+  
+    .repo-container {
+      margin-top: 15  0px;
+      margin-bottom: 20px;
+      border: none;
+    }
+  
+    form {
+      flex-direction: column;
+      gap: 10px;
+      padding: 10px;
+    }
+  
+    .repo-holder {
+      margin: 100px auto;
+      padding: 20px;
+    }
+  }
+  @media (max-width: 767px) {
+    .center{
+      border :none;
+    }
+    form{
+      padding: 10px;
+      gap:15px;
+      background: transparent;
+    }
     .repo-holder{
-            
-        padding-left: 10px;
-        padding-right: 10px;
+      padding: 0;
     }
-    }
+  }
