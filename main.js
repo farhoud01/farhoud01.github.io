@@ -1,6 +1,7 @@
 let input = document.getElementById("user-name");
 let submit = document.getElementById("sub");
 let info = document.getElementById("Info");
+let reset = document.getElementById("reset");
 
 let errorOccurred = false;
  submit.addEventListener("click",() =>{
@@ -8,6 +9,9 @@ let errorOccurred = false;
     event.preventDefault();
  }
  )
+reset.addEventListener("click",() =>{
+  info.firstChild.remove();
+});
 
         async function sendRequest(){
             try{
@@ -24,16 +28,23 @@ let errorOccurred = false;
                   
                  let repoName =   document.createElement("h1");
                     
-                   repoName.appendChild(document.createTextNode(repo.name));
+                   repoName.appendChild(document.createTextNode("repository name : "+repo.name));
                    let description =  document.createElement("p");
+                   let url = document.createElement("a");
+                   url.setAttribute("href",  repo.html_url);
+                   url.setAttribute("target", "_blank");
+                   url.classList.add("link")  
+                   url.appendChild(document.createTextNode("Visit Repository"));
                    if (repo.description && repo.description.trim() !== "") {
-                    description.textContent = repo.description;
+                    description.textContent = "description : "+repo.description;
                   } else {
-                    description.textContent = "No description found in the repo.";
+                    description.textContent = "No description found in the repository";
                   }
+                  url.classList.add("reset","link");
                    
-                     container.appendChild(repoName);
+                     container.appendChild(repoName); 
                     container.appendChild(description);
+                    container.appendChild(url);
                 });
                 container.classList.add("repo-container");
             
@@ -46,7 +57,8 @@ let errorOccurred = false;
               
             }
             catch(err){
-              alert("Invalid user name");
+              alert(err);
+              
             }
          
         }
